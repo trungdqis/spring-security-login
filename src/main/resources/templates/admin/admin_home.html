@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My Application Admin Control Panel</title>
+</head>
+<body>
+<div align="center">
+    <h2>Welcome to My Application Admin Control Panel</h2>
+    <p>
+        Your username is: <b>[[${#request.userPrincipal.principal.username}]]</b>
+    </p>
+    <form th:action="@{/admin/logout}" method="post">
+        <input type="submit" value="Logout" />
+    </form>
+</div>
+</body>
+</html>
