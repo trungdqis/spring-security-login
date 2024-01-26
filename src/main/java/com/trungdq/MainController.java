@@ -16,9 +16,9 @@ public class MainController {
         return "admin/admin_login";
     }
 
-    @GetMapping("/user/login")
-    public String viewUserLoginPage() {
-        return "user/user_login";
+    @GetMapping("/customer/login")
+    public String viewCustomerLoginPage() {
+        return "customer/customer_login";
     }
 
     @GetMapping("/admin/home")
@@ -26,8 +26,8 @@ public class MainController {
         return "admin/admin_home";
     }
 
-    @GetMapping("/user/home")
-    public String viewUserHomePage() {
-        return "user/user_home";
+    @GetMapping("/customer/home")
+    public String viewCustomerHomePage() {
+        return "customer/customer_home";
     }
 }

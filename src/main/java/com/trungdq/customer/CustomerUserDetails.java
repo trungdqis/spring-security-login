@@ -1,38 +1,32 @@
-package com.trungdq;
+package com.trungdq.customer;
 
+import com.trungdq.admin.User;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
-public class CustomUserDetails implements UserDetails {
+public class CustomerUserDetails implements UserDetails {
 
-    private User user;
+    private Customer customer;
 
-    public CustomUserDetails(User user) {
-        this.user = user;
+    public CustomerUserDetails(Customer customer) {
+        this.customer = customer;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<GrantedAuthority> authorities = new ArrayList<>();
-
-        authorities.add(new SimpleGrantedAuthority(user.getRole().toString()));
-
-        return authorities;
+        return null;
     }
 
     @Override
     public String getPassword() {
-        return user.getPassword();
+        return customer.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return user.getEmail();
+        return customer.getEmail();
     }
 
     @Override

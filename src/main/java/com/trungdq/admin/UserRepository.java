@@ -1,4 +1,4 @@
-package com.trungdq;
+package com.trungdq.admin;
 
 import org.springframework.data.repository.CrudRepository;
 

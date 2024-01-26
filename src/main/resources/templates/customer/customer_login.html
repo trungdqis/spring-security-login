@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User Login - My Application</title>
+    <title>Customer Login - My Application</title>
 </head>
 <body>
 <div align="center">
-    <h2>User Login - My Application</h2>
+    <h2>Customer Login - My Application</h2>
 
     <div th:if="${param.error}">
         <h4 style="color: red">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</h4>
     </div>
 
-    <form th:action="@{/user/login}" method="post">
+    <form th:action="@{/customer/login}" method="post">
         <table>
             <tr>
                 <td>Email: </td>
